@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #212121;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,16 +12,16 @@ body {
 
 #main {
     text-align: center;
-    background-color: #fff;
+    background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #333;
+    color: #ff6600; /* Laranja para o tema Halloween */
 }
 
 .Caixa {
@@ -28,13 +29,19 @@ h1 {
     padding: 8px;
     font-size: 16px;
     width: 200px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff6600; /* Laranja para o tema Halloween */
     border-radius: 5px;
+    background-color: #212121; /* Fundo escuro para contrastar com a borda laranja */
+    color: #ffffff;
 }
 
-.calcular {
-    background-color: #4caf50;
-    color: white;
+.Caixa::placeholder {
+    color: #ffffff;
+}
+
+.calcular, .calcular:hover {
+    background-color: #ff6600; /* Laranja para o tema Halloween */
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -42,17 +49,22 @@ h1 {
     border-radius: 5px;
 }
 
-.calcular:hover {
-    background-color: #45a049;
-}
-
 #grafico {
-    width: 140px;
+    width: 130px;
     height: 100px;
     margin: 20px 0;
 }
 
 h3, h4 {
     margin: 10px 0;
-    color: #333;
+    color: #ff6600; /* Laranja para o tema Halloween */
+}
+
+
+input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
