@@ -11,14 +11,36 @@
     <div id="main">
     <h1>APP - Health</h1>
         <form name="frmIMC">
+            <input type="number" name="txtIdade" placeholder="Idade" class="Caixa">
             <input type="number" name="txtPeso" placeholder="Peso" class="Caixa">
             <input type="number" name="txtAltura" placeholder="Altura" class="Caixa">
-            <input type="button" value="Calcular" onclick="calcularIMC()" class="calcular">
+        <p>
+            Sexo:
+            <input type="radio" name="grupo" id="m">Masculino
+            <input type="radio" name="grupo" id="f">Feminino
+        </p>
+        <p>
+            <select name="nivel" id="atividade">
+                <option value="" selected>Selecione o nível de atividade fisíca</option>
+                <option value="1.2">Sedentário (trabalho de escritório)</option>
+                <option value="1.375">Exercício leve (1 - 2 dias por semana)</option>
+                <option value="1.55">Exercício moderado (3 - 5 dias por semana)</option>
+                <option value="1.725">Exercício pesado (6 - 7 dias por semana)</option>
+                <option value="1.9">Atleta (2x por dia)</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" value="Calcular" onclick="calcular()" class="calcular">
             <input type="reset" value="Limpar" onclick="limpar()" class="limpar">
+        </p>
         </form>
         <img src="icons/reset.png" alt="marcador IMC" id="grafico">
         <h3 id="imc"></h3>
         <h4 id="status"></h4>
+        <img src="icons/heart.png" alt="coração">
+        <h3 id="freq"></h3>
+        <h3>calorias por dia: </h3>
+        <h4 id="calorias"></h4>
     </div>
     <script src="health.js"></script>
 
