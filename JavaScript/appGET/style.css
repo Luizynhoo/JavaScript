@@ -1,0 +1,182 @@
+/* Importação de Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* CSS Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+/*Cabeçalho*/
+header {
+    margin: 25px 0px 25px 0px;
+    /*top right botton left*/
+
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #cc470d;
+
+}
+
+/*Formulario*/
+input[type=number] {
+    width: 90px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #cc470d;
+}
+
+/*tirar setinhas*/
+
+input[type=number]::-webkit-inner-spin-button {
+    /* retirar as setinhas o input number do chrome */
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    /* retirar as setinhas o input number fire fox*/
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.Radio {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px 25px 0px;
+}
+
+.Radio p {
+    padding-right: 25px;
+    font-weight: 700;
+}
+
+.Sexo {
+    padding: 0px 20px 0px 20px;
+}
+
+#atividade {
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cc470d;
+}
+
+input[type=button] {
+    padding: 10px 25px 10px 25px;
+    margin: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cc470d;
+    color: #ffffff;
+}
+
+input[type=reset] {
+    padding: 10px 25px 10px 25px;
+    margin: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* Info IMC e FCM */
+
+.Info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 25px 0px 25px 0px;
+}
+
+.Peso {
+    text-align: center;
+}
+
+.Fcm {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Calorias */
+#calorias {
+    font-size: 2em;
+    font-weight: 700;
+    color: #cc470d;
+}
+
+
+/*** Coração Pulsando ***/
+
+.Coracao {
+    width: 50px;
+    height: 50px;
+    /*border: 1px solid #00ff00;*/
+    position: relative;
+    transform: rotate(-135deg);
+    margin-left: 50px;
+    animation: pulsar 0.7s infinite alternate;
+    z-index: -1;
+    /*mexe na camada*/
+
+}
+
+.Quadrado {
+    width: 50px;
+    height: 50px;
+    /*border: 1px solid #000;*/
+    position: absolute;
+    background-color: #e74c3c;
+}
+
+.Circulo {
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid rgb(255, 0, 0);*/
+    border-radius: 50px;
+    position: absolute;
+    background-color: #e74c3c;
+}
+
+.Top {
+    top: 50%;
+}
+
+.Left {
+    left: 50%;
+}
+
+/* Animação com CSS*/
+@keyframes pulsar {
+    0% {
+        transform: scale(0.95) rotate(-135deg);
+    }
+
+    100% {
+        transform: scale(1.15) rotate(-135deg);
+    }
+}
+
+
+/* rotacionar tela */
+@media screen and (min-width: 576px) and (max-width: 992px) and (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
