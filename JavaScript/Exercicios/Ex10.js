@@ -7,6 +7,7 @@ class Produto {
   aplicarDesconto(desconto){
     const valorDesconto = (desconto/100) * this.preco;
     this.preco = this.preco - valorDesconto
+    return this.preco;
   }
   
  verificarPreco(){
