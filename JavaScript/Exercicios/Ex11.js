@@ -1,3 +1,5 @@
+//Etapa 01
+
 class Pedido {
   constructor(id, valor){
     this.id = id;
@@ -6,45 +8,44 @@ class Pedido {
   
   verificarValor(){
     if(this.valor > 100){
-      return "alto"
+      return "Alto"
     } else {
-      return "baixo"
+      return "Baixo"
     }
   }
 }
 
-let pedidos = [
-  new Pedido(1,  25),
-  new Pedido(2,  50),
-  new Pedido(3, 175),
-  new Pedido(4, 124)
-];
+//Etapa 02
 
-for (let i = 0; i < pedidos.length; i++){
-  let pedidoAtual = pedidos[i];
-  let classificacao = pedidoAtual.verificarValor();
+const pedidos = [
+    new Pedido (1, 40),
+    new Pedido (2, 75),
+    new Pedido (3, 124),
+    new Pedido (4, 215)
+  ];
   
-  console.log(`Pedido ${pedidoAtual.id} - ${classificacao}`)
-}
-
-function contarPedidos(listaDePedidos) {
-  let altos = 0;
-  let baixos = 0;
+  for(let pedido of pedidos) {
+    console.log(`Pedido ${pedido.id} - ${pedido.verificarValor()}`);
+  };
   
-  for (let i = 0; i < listaDePedidos.length; i++){
-    let pedido = listaDePedidos[i];
+  //Etapa 03
+  
+  function contarPedidos(lista){
     
-    if(pedido.valor > 100){
-      altos++
-    } else {
-      baixos ++
+    let altos = 0;
+    let baixos = 0;
+    
+    for(let pedido of lista){
+      if(pedido. valor > 100){
+        altos ++
+      } else {
+        baixos++
+      }
     }
+    
+    return (altos, baixos)
   }
   
-  return {
-    altos: altos,
-    baixo: baixos
-  }
-}
-
-console.log(contarPedidos(pedidos));
+  console.log(`Pedidos altos : ${contarPedidos(pedidos)}`);
+  
+  
