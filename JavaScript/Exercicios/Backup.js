@@ -73,9 +73,13 @@ adicionarMesa(mesa) {
 
 }
 
-const cliente1 = new Cliente('Luiz', '123.456.789-00');
-const restaurante1 = new Restaurante('CocoBambu', 'Avenida Kennedy, 700 Bairro Jardim do Mar, São Bernardo do Campo', 20, []);
-const mesa1 = new Mesa(1, 4, 'Salao');
-const reserva1 = new Reserva(cliente1, restaurante1, mesa1, 4, 'Salao', 'noite', '');
+const criarReserva = [
+  cliente1 = new Cliente('Luiz', '123.456.789-00'),
+  restaurante1 = new Restaurante('CocoBambu', 'Avenida Kennedy, 700 Bairro Jardim do Mar, São Bernardo do Campo', 20, []),
+  mesa1 = new Mesa(1, 4, 'Salao'),
+  reserva1 = new Reserva(cliente1, restaurante1, mesa1, 4, 'Salao', 'noite', ''),
+  
+  ]
+
 
 console.log(reserva1);
