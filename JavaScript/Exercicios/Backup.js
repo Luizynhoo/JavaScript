@@ -41,7 +41,6 @@ class Reserva {
     this.qtdPessoas = qtdPessoas;
     this.localPreferencia = localPreferencia;
     this.periodo = periodo;
-    this.status = status || 'pendente';
   }
   
   verificarPeriodo() {
@@ -54,11 +53,25 @@ class Reserva {
       return false;
     }
   }
+  
+  
+  adicionarMesa(){
+    if(this.capacidade >= this.qtdPessoas){
+      Reserva.status = 'confirmado';
+      return 'confirmado'
+    } else if (this.capacidade < this.qtdPessoas){
+      Reserva.status = 'cancelado';
+      return 'cancelado'
+    } else {
+      Reserva.status = 'pendente';
+      return 'pendente'
+    }
+  }
 }
 
 const cliente1 = new Cliente('Luiz', '123.456.789-00');
 const restaurante1 = new Restaurante('CocoBambu', 'Avenida Kennedy, 700 Bairro Jardim do Mar, São Bernardo do Campo', 20, []);
-const mesa1 = new Mesa(1, 4, 'Salao');
-const reserva1 = new Reserva(cliente1, restaurante1, mesa1, 4, 'Salao', 'noite', 'confirmado');
+const mesa1 = new Mesa(1, 2, 'Salao');
+const reserva1 = new Reserva(cliente1, restaurante1, mesa1, 4, 'Salao', 'noite', '');
 
 console.log(reserva1);
